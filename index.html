@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>BBLOVES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <nav>
+        <h1>Onyokito</h1>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+
+        </div>
+        <ul id="navMenu">
+            <li><a href = "#">Home</a></li>
+            <li><a href = "#about" class="nav-link">About</a></li>
+            <li><a href = "#skills" class="nav-link">Skills</a></li>
+            <li><a href = "#workexp" class="nav-link">Work Experience</a></li>
+            <li><a href = "#projects" class="nav-link">Projects</a></li>
+            <li><a href = "#">Recognitions & Awards</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu(){
+            document.getElementById("navMenu").classList.toggle("show");
+        }
+    </script>
+
+    <header>
+    <h1>Christopher Bacula</h1>
+    <img src="kone.jpg" width="150">
+    <p>Wanna be Web Developer</p>
+
+    <a href="#contact" class="btn" onclick="openModal()">Hire Me</a>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Contact Me</h2>
+            <a href="https://www.facebook.com/christopher.bolano.9" class="contact-option">
+                <i class="fab fa-facebook-messenger"></i>Messenger</a>
+        
+            <a href="bacula.25christopher@gmail.com" class="contact-option">
+            <i class="fas fa-envelope"></i>Gmail</a>
+        </div>
+    </div>
+    </header>
+
+ <!-- About -->
+    <section id="about">
+    <h2>About Me</h2>
+    <p class="about-text">I have successfully designed, developed, and published applications on the Google Play Store using Kotlin and Java. In addition, my previous role as an encoder allowed me to develop accuracy and attention to detail by checking balances between online banking records and corresponding spreadsheets to ensure data consistency. This experience further enhanced my organizational and analytical skills, which continue to support my effectiveness in technical work. I am committed to continuously improving my skills and knowledge to create mobile applications that are both efficient and user-friendly.</p>
+    <p class="about-text">My background as a warehouse staff strengthened my organizational skills, attention to detail, and ability to perform well under pressure—qualities that greatly contribute to my performance as a developer.
+ </p>
+ <p class="about-text">Additionally, my experience as a waiter allowed me to interact with diverse individuals, honing my communication, teamwork, and problem-solving skills. These experiences collectively shaped me into a resourceful and adaptable professional capable of thriving in dynamic and challenging work environments</p>
+ </section>
+
+<!-- Work Experience -->
+<section id="workexp">
+    <h2>Work Experience</h2>
+    <ul>
+        <li>Adsia Logistics - Warehouse Staff (2025-2026)</li>
+        <li>OKVIP Company - Data Encoder (2024)</li>
+        <li>ATT OKVIP - Android Developer (2022-2024)</li>
+        <li>Global Entertainnment Inc. - Android Developer (2022)</li>
+        <li>MetroCombine Logistics Solutions Inc. - Warehouse Staff (2021-2022)</li>
+        <li>GloryPalm Pavillion Grill & Restobar Evnts's Place - Waiter (2015-2020)</li>
+    </ul>
+</section>
+
+ <!-- Skills -->
+ <section id="skills">
+ <h2>Skills</h2>
+ <ul>
+    <li>Microsoft Office (Word, Excel)</li>
+    <li>Android App Development (Kotlin, Java)</li>
+    <li>Order Picking & Packing</li>
+    <li>Quality Control & Inspection</li>
+    <li>Customer Service</li>
+    <li>Food Safety & Hygiene</li>
+</ul>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+        <div class="card">
+            <h3>Website Project</h3>
+            <p>Simple HTML Website</p>
+        </div>
+        <div class="card">
+            <h3>Portfolio</h3>
+            <p>Personal Portfolio</p>
+        </div>
+    </div>
+</section>
+
+<!-- Popup Box for Hire Me -->
+<script>
+    function openModal(){
+        document.getElementById("contactModal").style.display = "block";
+    }
+
+    function closeModal(){
+        document.getElementById("contactModal").style.display = "none";
+    }
+</script>
+
+<!-- Nav Highlight -->
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav.link");
+
+    window.addEventListener("scroll", () =>{
+        let current = "";
+         sections.forEach(section => {
+            const sectionTop = section.offsetTop - 80;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollY => sectionTop && scrollY <screenTop + sectionHeight){
+                current = section.getAttribute("id");
+            }
+         });
+
+         navLinks.forEach(link =>{
+            link.classList.remove("active");
+            if(link.getAttribute("href") === "#" + current){
+                link.classList.add("active");
+            }
+         });
+    });
+</script>
+
+</body>
+</html> 
