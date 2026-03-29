@@ -1,9 +1,6 @@
 body{
     margin: 0;
-    margin-top: 70px;
     background: linear-gradient(135deg, #0f172a, #38bdf8);
-    /*background-size: 60% 60%;*/   
-    /*animation: gradientMove 8s ease infinite;*/
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 
@@ -11,20 +8,25 @@ body{
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background:  #020617;
+    background:  #2742bb;
     position: fixed;
     z-index: 1000;
     top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav h1 {
     color: #38bdf8;
+    margin: 0;
+    margin-left: 15px;
 }
 
 nav ul {
@@ -57,6 +59,8 @@ nav a:hover {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: white;
+    margin-left: auto;
 
 }
 
@@ -64,25 +68,36 @@ nav a:hover {
     .menu-toggle{
         display: block;
         color: white;
+        margin-right: 20px;
     }
-    nav{
-        flex-direction: column;
-        align-items: flex-start;
+
+    nav h1{
+        display: none;
     }
-    nav ul{
+    
+     nav ul {
+        position: fixed; 
+        top: 60px;
+        left: 0;
+        width: 100%;
         display: none;
         flex-direction: column;
-        width: 100%;
         background: #020617;
-        margin-top: 10px;
-        padding: 10px 0;
-    }
-    nav ul li{
         text-align: center;
-        padding: 10px 0;
     }
-    nav ul.show{
-        display: flex;
+
+    nav ul li {
+        padding: 12px 0;
+    }
+
+    #navMenu {
+        display: none;       /* hide by default */
+        flex-direction: column;
+        background: #020617;
+    }
+
+    #navMenu.show {
+        display: flex;      /* lalabas kapag active */
     }
 }
 
@@ -95,7 +110,8 @@ nav a:hover {
 
 header {
     text-align: center;
-    background: #1e293b;
+    background: #021532;
+    padding: 90px 20px 20px 20px;
 }
 
 section{
@@ -126,7 +142,7 @@ a{
 
 .btn{
     display: inline-block;
-    margin-top: 15px;
+    margin: 15px;
     padding: 8px 16px;
     background: #38bdf8;
     color: black;

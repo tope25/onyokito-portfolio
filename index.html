@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head> <title>BBLOVES</title>
+    <head> <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,7 @@
 <body>
 
     <nav>
-        <h1>Onyokito</h1>
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-
-        </div>
+        <h1>Portfolio</h1>
         <ul id="navMenu">
             <li><a href = "#">Home</a></li>
             <li><a href = "#about" class="nav-link">About</a></li>
@@ -21,19 +17,15 @@
             <li><a href = "#projects" class="nav-link">Projects</a></li>
             <li><a href = "#">Recognitions & Awards</a></li>
         </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
-
-    <script>
-        function toggleMenu(){
-            document.getElementById("navMenu").classList.toggle("show");
-        }
-    </script>
 
     <header>
     <h1>Christopher Bacula</h1>
     <img src="kone.jpg" width="150">
     <p>Wanna be Web Developer</p>
 
+     <!-- Hire me popup box -->
     <a href="#contact" class="btn" onclick="openModal()">Hire Me</a>
     <div id="contactModal" class="modal">
         <div class="modal-content">
@@ -135,5 +127,12 @@
     });
 </script>
 
+<!-- Hamburger Menu -->
+    <script>
+        function toggleMenu(){
+            document.getElementById("navMenu").classList.toggle("show");
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
