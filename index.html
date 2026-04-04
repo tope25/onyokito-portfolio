@@ -1,138 +1,285 @@
 <!DOCTYPE html>
 <html>
-    <head> <title>My Portfolio</title>
+
+<head>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
     <nav>
-        <h1>Portfolio</h1>
+        <img src="images/cb.png" alt="cb logo" class="cb-logo">
         <ul id="navMenu">
-            <li><a href = "#">Home</a></li>
-            <li><a href = "#about" class="nav-link">About</a></li>
-            <li><a href = "#skills" class="nav-link">Skills</a></li>
-            <li><a href = "#workexp" class="nav-link">Work Experience</a></li>
-            <li><a href = "#projects" class="nav-link">Projects</a></li>
-            <li><a href = "#">Recognitions & Awards</a></li>
+            <li><a href="#">Me</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#workexp" class="nav-link">Work Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#awards">Recognitions & Awards</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <header>
-    <h1>Christopher Bacula</h1>
-    <img src="kone.jpg" width="150">
-    <p>Wanna be Web Developer</p>
+    <header class="onyok">
+        <h1>Christopher Bacula</h1>
+        <img src="images/onyok.png" alt="Me">
 
-     <!-- Hire me popup box -->
-    <a href="#contact" class="btn" onclick="openModal()">Hire Me</a>
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Contact Me</h2>
-            <a href="https://www.facebook.com/christopher.bolano.9" class="contact-option">
-                <i class="fab fa-facebook-messenger"></i>Messenger</a>
-        
-            <a href="bacula.25christopher@gmail.com" class="contact-option">
-            <i class="fas fa-envelope"></i>Gmail</a>
+        <!-- Hire me popup box -->
+        <a href="#contact" class="btn" onclick="openModal()">Let's Connect</a>
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Contact Me</h2>
+                <a href="https://www.facebook.com/christopher.bolano.9" class="contact-option">
+                    <i class="fab fa-facebook-messenger"></i>Messenger</a>
+
+                <a href="bacula.25christopher@gmail.com" class="contact-option">
+                    <i class="fas fa-envelope"></i>Gmail</a>
+            </div>
         </div>
-    </div>
     </header>
 
- <!-- About -->
+    <!-- About -->
     <section id="about">
-    <h2>About Me</h2>
-    <p class="about-text">I have successfully designed, developed, and published applications on the Google Play Store using Kotlin and Java. In addition, my previous role as an encoder allowed me to develop accuracy and attention to detail by checking balances between online banking records and corresponding spreadsheets to ensure data consistency. This experience further enhanced my organizational and analytical skills, which continue to support my effectiveness in technical work. I am committed to continuously improving my skills and knowledge to create mobile applications that are both efficient and user-friendly.</p>
-    <p class="about-text">My background as a warehouse staff strengthened my organizational skills, attention to detail, and ability to perform well under pressure—qualities that greatly contribute to my performance as a developer.
- </p>
- <p class="about-text">Additionally, my experience as a waiter allowed me to interact with diverse individuals, honing my communication, teamwork, and problem-solving skills. These experiences collectively shaped me into a resourceful and adaptable professional capable of thriving in dynamic and challenging work environments</p>
- </section>
+        <h2>About Me</h2>
+        <p class="about-text">I have successfully designed, developed, and published applications on the Google Play
+            Store using Kotlin and Java. In addition, my previous role as an encoder allowed me to develop accuracy and
+            attention to detail by checking balances between online banking records and corresponding spreadsheets to
+            ensure data consistency. This experience further enhanced my organizational and analytical skills, which
+            continue to support my effectiveness in technical work. I am committed to continuously improving my skills
+            and knowledge to create mobile applications that are both efficient and user-friendly.</p>
+        <p class="about-text">My background as a warehouse staff strengthened my organizational skills, attention to
+            detail, and ability to perform well under pressure—qualities that greatly contribute to my performance as a
+            developer.
+        </p>
+        <p class="about-text">Additionally, my experience as a waiter allowed me to interact with diverse individuals,
+            honing my communication, teamwork, and problem-solving skills. These experiences collectively shaped me into
+            a resourceful and adaptable professional capable of thriving in dynamic and challenging work environments
+        </p>
+    </section>
 
-<!-- Work Experience -->
-<section id="workexp">
-    <h2>Work Experience</h2>
-    <ul>
-        <li>Adsia Logistics - Warehouse Staff (2025-2026)</li>
-        <li>OKVIP Company - Data Encoder (2024)</li>
-        <li>ATT OKVIP - Android Developer (2022-2024)</li>
-        <li>Global Entertainnment Inc. - Android Developer (2022)</li>
-        <li>MetroCombine Logistics Solutions Inc. - Warehouse Staff (2021-2022)</li>
-        <li>GloryPalm Pavillion Grill & Restobar Evnts's Place - Waiter (2015-2020)</li>
-    </ul>
-</section>
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
 
- <!-- Skills -->
- <section id="skills">
- <h2>Skills</h2>
- <ul>
-    <li>Microsoft Office (Word, Excel)</li>
-    <li>Android App Development (Kotlin, Java)</li>
-    <li>Order Picking & Packing</li>
-    <li>Quality Control & Inspection</li>
-    <li>Customer Service</li>
-    <li>Food Safety & Hygiene</li>
-</ul>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="projects">
-        <div class="card">
-            <h3>Website Project</h3>
-            <p>Simple HTML Website</p>
+        <div class="skill-row">
+            <span>Microsoft Office (Word, Excel)</span>
+            <span>Android App Development (Kotlin, Java)</span>
         </div>
-        <div class="card">
-            <h3>Portfolio</h3>
-            <p>Personal Portfolio</p>
+
+        <div class="skill-row">
+            <span>Android Studio SDK</span>
+            <span>XML Layout Design</span>
         </div>
+
+        <div class="skill-row">
+            <span>Version Control (Git/GitHub)</span>
+            <span>Order Picking & Packing</span>
+        </div>
+
+        <div class="skill-row">
+            <span>Inventory Management</span>
+            <span>FIFO Implementation (First In, First Out)</span>
+        </div>
+
+        <div class="skill-row">
+            <span>Receiving & Checking Deliveries</span>
+            <span>Quality Control & Inspection</span>
+        </div>
+
+        <div class="skill-row">
+            <span>Customer Service</span>
+            <span>Order Taking & Serving</span>
+        </div>
+
+        <div class="skill-row">
+            <span>Table Setting & Bussing</span>
+            <span>Handling Customer Complaints</span>
+        </div>
+
+        <div class="skill-row">
+            <span>Food Safety & Hygiene</span>
+            <span>Barcode Scanning</span>
+        </div>
+
+        <div class="skill-row">
+            <span>Time Management during Peak Hours</span>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="workexp">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>Adsia Logistics - Warehouse Staff (2025-2026)</li>
+            <li>OKVIP Company - Data Encoder (2024)</li>
+            <li>ATT OKVIP - Android Developer (2022-2024)</li>
+            <li>Global Entertainnment Inc. - Android Developer (2022)</li>
+            <li>MetroCombine Logistics Solutions Inc. - Warehouse Staff (2021-2022)</li>
+            <li>GloryPalm Pavillion Grill & Restobar Events's Place - Waiter (2015-2020)</li>
+        </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects">
+            <div class="card" onclick="toggleSmartStick(this)">
+                <h3>Smart Blind Stick</h3>
+                <p class="click-text">Click to view</p>
+
+                <div class="smart-details">
+                    <p class="projects-p">The Blind Guide is the upgraded cane capable to those people who are visually
+                        impaired. It
+                        composed of ultrasonic transducer that converts the distance to electrical signal to locate
+                        obstruction.
+                    </p>
+                    <img src="images/39249589_247409216097469_7921939561108733952_n.jpg" alt="smartblindstick">
+                    <img src="images/43271784_172825770271564_261851052091899904_n.jpg " alt="smartblindstick">
+                    <img src="images/43284897_1952790081468057_4107273664636911616_n.jpg" alt="smartblindstick">
+                    <img src="images/43383214_319815435460678_8959191089558847488_n.jpg " alt="smartblindstick">
+                </div>
+            </div>
+            <div class="card" onclick="toggleSmartStick(this)">
+                <h3>Micro-controller Based Biogas Collector and Fertilizer Maker with Android Application</h3>
+                <p class="click-text">Click to view</p>
+
+                <div class="smart-details">
+                    <p class="projects-p">By using this machine, we can collect renewable energy from cow dungs and
+                        leftovers.</p>
+                    <p class="projects-p">Also can collect organic fertilizers that is useful for the crops.
+                    </p>
+                    <p class="projects-p"> Android based for control panel using android devices that connect the
+                        machine and device
+                        through
+                        Bluetooth. To monitor the temperature and its moisture.
+                    </p>
+                    <img src="images/48406687_754271134953984_981372887237656576_n.jpg" alt="Biogas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <div class="certs">
+            <h2>Recognitions & Awards</h2>
+            <img src="images/cert_mcl1.jpeg" class="clickable-img" alt="Certificate" onclick="openImage(this)">
+            <img src="images/cert_mcl2.jpeg" class="clickable-img" alt="Certificate" onclick="openImage(this)">
+            <img src="images/cert_smartblind.jpg" class="clickable-img" alt="Certificate" onclick="openImage(this)">
+        </div>
+    </section>
+
+    <!-- Click Image View with Previous & Next Button -->
+    <div id="imagePreview">
+        <span id="closeBtn" onclick="closeImage()">&times;</span>
+        <span id="prevBtn" onclick="changeImage(-1)">❮</span>
+        <img id="previewImg">
+        <span id="nextBtn" onclick="changeImage(1)">❯</span>
     </div>
-</section>
 
-<!-- Popup Box for Hire Me -->
-<script>
-    function openModal(){
-        document.getElementById("contactModal").style.display = "block";
-    }
 
-    function closeModal(){
-        document.getElementById("contactModal").style.display = "none";
-    }
-</script>
-
-<!-- Nav Highlight -->
-<script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav.link");
-
-    window.addEventListener("scroll", () =>{
-        let current = "";
-         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 80;
-            const sectionHeight = section.clientHeight;
-
-            if (scrollY => sectionTop && scrollY <screenTop + sectionHeight){
-                current = section.getAttribute("id");
-            }
-         });
-
-         navLinks.forEach(link =>{
-            link.classList.remove("active");
-            if(link.getAttribute("href") === "#" + current){
-                link.classList.add("active");
-            }
-         });
-    });
-</script>
-
-<!-- Hamburger Menu -->
     <script>
-        function toggleMenu(){
+
+        let currentIndex = 0;
+        let images = [];
+
+        function openImage(img) {
+            const preview = document.getElementById("imagePreview");
+            const previewImg = document.getElementById("previewImg");
+
+            images = Array.from(document.querySelectorAll(".clickable-img"));
+            currentIndex = images.indexOf(img);
+
+            preview.style.display = "flex";
+            previewImg.src = img.src;
+
+        }
+        function closeImage() {
+            document.getElementById("imagePreview").style.display = "none";
+
+        }
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+
+            document.getElementById("previewImg").src = images[currentIndex].src;
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowRight") changeImage(1);
+                if (e.key === "ArrowLeft") changeImage(-1);
+                if (e.key === "Escape") closeImage();
+            });
+        }
+    </script>
+
+    <!-- Popup Box for Hire Me -->
+    <script>
+        function openModal() {
+            document.getElementById("contactModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+    </script>
+
+    <!-- Nav Highlight -->
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav.link");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 80;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollY => sectionTop && scrollY < screenTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+    <!-- Hamburger Menu -->
+    <script>
+        function toggleMenu() {
             document.getElementById("navMenu").classList.toggle("show");
         }
     </script>
+
+    <!-- Automatic Scroll when card is open -->
+    <script>
+        function toggleSmartStick(card) {
+            const details = card.querySelector(".smart-details");
+            const isOpen = details.style.display === "block";
+
+            details.style.display = isOpen ? "none" : "block";
+
+            if (!isOpen) {
+                setTimeout(() => {
+                    card.scrollIntoView({
+                        behavior: "smooth", block: "end"
+                    });
+                }, 50);
+            }
+        }
+    </script>
+
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
